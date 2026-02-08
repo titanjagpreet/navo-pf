@@ -138,10 +138,10 @@ export default function Home() {
               icon={<BookOpen className="w-6 h-6 sm:w-7 sm:h-7" />}
             />
             <ExperienceCard 
-              title="B.Tech (CS)"
-              role="UIT RGPV"
+              title="B.Tech (CSE)"
+              role="University Institute of Technology Rajiv Gandhi Proudyogiki Vishwavidyalaya (UIT RGPV)"
               org="Bhopal, India"
-              date="2021"
+              date="2019"
               icon={<Code className="w-6 h-6 sm:w-7 sm:h-7" />}
             />
           </div>
