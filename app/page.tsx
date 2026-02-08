@@ -24,13 +24,13 @@ export default function Home() {
       
       {/* Floating Dock Navigation */}
       <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit px-4">
-        <div className="flex items-center gap-1 sm:gap-2 px-2 py-2 sm:px-4 sm:py-3 rounded-full border border-border bg-card/80 backdrop-blur-md shadow-lg ring-1 ring-white/10 overflow-x-auto max-w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-          <DockLink href="#" icon={<HomeIcon className="w-5 h-5 sm:w-6 sm:h-6" />} label="Home" />
-          <DockLink href="#about" icon={<User className="w-5 h-5 sm:w-6 sm:h-6" />} label="About" />
-          <DockLink href="#affiliation" icon={<Briefcase className="w-5 h-5 sm:w-6 sm:h-6" />} label="Experience" />
-          <DockLink href="#education" icon={<GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />} label="Education" />
-          <DockLink href="#research" icon={<BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />} label="Research" />
-          <DockLink href="#contact" icon={<Mail className="w-5 h-5 sm:w-6 sm:h-6" />} label="Contact" />
+        <div className="flex items-center gap-1 sm:gap-2 px-2 py-2 sm:px-4 sm:py-3 lg:px-3 lg:py-2 rounded-full border border-border bg-card/80 backdrop-blur-md shadow-lg ring-1 ring-white/10 overflow-x-auto max-w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+          <DockLink href="#" icon={<HomeIcon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Home" />
+          <DockLink href="#about" icon={<User className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="About" />
+          <DockLink href="#affiliation" icon={<Briefcase className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Experience" />
+          <DockLink href="#education" icon={<GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Education" />
+          <DockLink href="#research" icon={<BookOpen className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Research" />
+          <DockLink href="#contact" icon={<Mail className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Contact" />
         </div>
       </nav>
 
@@ -38,13 +38,13 @@ export default function Home() {
         
         {/* Hero Section */}
         <header 
-          className={`pt-20 sm:pt-28 pb-8 sm:pb-12 transition-all duration-700 ${
+          className={`pt-20 sm:pt-28 lg:pt-20 pb-8 sm:pb-12 lg:pb-8 transition-all duration-700 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-12">
             <div className="flex flex-col items-center gap-4 shrink-0">
-              <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-muted overflow-hidden ring-4 ring-border hover:ring-primary/50 transition-all duration-300 shadow-xl relative">
+              <div className="w-28 h-28 sm:w-40 sm:h-40 lg:w-32 lg:h-32 rounded-full bg-muted overflow-hidden ring-4 ring-border hover:ring-primary/50 transition-all duration-300 shadow-xl relative">
                 <Image 
                   src="/profile.jpeg" 
                   alt="Navodita Singh" 
@@ -66,7 +66,7 @@ export default function Home() {
 
             <div className="text-center sm:text-left">
               <div className="flex flex-col sm:flex-row items-center sm:items-baseline gap-2 sm:gap-3 mb-3 sm:mb-5">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight glow-text">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold tracking-tight glow-text">
                   Navodita Singh
                 </h1>
                 <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-secondary text-secondary-foreground text-[10px] sm:text-xs font-mono border border-border/50 font-medium">
@@ -74,7 +74,7 @@ export default function Home() {
                 </span>
               </div>
               
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-lg text-muted-foreground max-w-2xl leading-relaxed">
                 Indian Institute of Science Education and Research, Bhopal
               </p>
             </div>
@@ -82,12 +82,12 @@ export default function Home() {
         </header>
 
         {/* About Section */}
-        <section id="about" className="py-6 sm:py-8 border-t border-border/40">
+        <section id="about" className="py-6 sm:py-8 lg:py-6 border-t border-border/40">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <User className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             About Me
           </h2>
-          <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed text-base sm:text-lg md:text-xl">
+          <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed text-base sm:text-lg md:text-xl lg:text-lg">
             <p className="mb-4">
               Hi, I’m Navodita Singh, a PhD Scholar at the Department of Data Science & Engineering, Indian Institute of Science Education and Research (IISER) Bhopal. I work under the supervision of Dr. Sundaram Muthu at the Robotic Perception and Embodied Intelligence Lab.
             </p>
@@ -98,7 +98,7 @@ export default function Home() {
         </section>
 
         {/* Experience / Affiliation Section */}
-        <section id="affiliation" className="py-6 sm:py-8 border-t border-border/40">
+        <section id="affiliation" className="py-6 sm:py-8 lg:py-6 border-t border-border/40">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             Experience
@@ -123,7 +123,7 @@ export default function Home() {
         </section>
 
         {/* Education Section */}
-        <section id="education" className="py-6 sm:py-8 border-t border-border/40">
+        <section id="education" className="py-6 sm:py-8 lg:py-6 border-t border-border/40">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             Education
@@ -148,7 +148,7 @@ export default function Home() {
         </section>
 
         {/* Research Interests (Tech Stack Style) */}
-        <section id="research" className="py-6 sm:py-8 border-t border-border/40">
+        <section id="research" className="py-6 sm:py-8 lg:py-6 border-t border-border/40">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             Research Interests
@@ -165,7 +165,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 sm:py-20 border-t border-border/40 text-center">
+        <section id="contact" className="py-16 sm:py-20 lg:py-16 border-t border-border/40 text-center">
           <div className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-secondary text-[10px] sm:text-xs font-medium mb-4 sm:mb-6 tracking-wide">
             CONTACT
           </div>
@@ -223,16 +223,16 @@ function TechPill({ icon, label }: { icon: string; label: string }) {
 function ExperienceCard({ title, role, org, date, icon }: { title: string; role: string; org: string; date: string; icon: React.ReactNode }) {
   return (
     <div className="flex items-start gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-card/30 hover:bg-card/80 transition-all border border-transparent hover:border-primary/20 group hover:shadow-lg">
-      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-secondary/80 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform duration-300">
+      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-12 lg:h-12 rounded-xl bg-secondary/80 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
       <div className="flex-1 min-w-0 pt-0.5 sm:pt-1">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5 sm:mb-2">
-          <h3 className="font-semibold text-foreground text-lg sm:text-xl truncate">{title}</h3>
-          <span className="text-xs sm:text-sm text-muted-foreground font-mono bg-secondary px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md self-start sm:self-auto">{date}</span>
+          <h3 className="font-semibold text-foreground text-lg sm:text-xl lg:text-lg truncate">{title}</h3>
+          <span className="text-xs sm:text-sm lg:text-xs text-muted-foreground font-mono bg-secondary px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md self-start sm:self-auto">{date}</span>
         </div>
-        <p className="text-sm sm:text-base font-medium text-foreground/90 mb-0.5 sm:mb-1">{role}</p>
-        {org && <p className="text-sm sm:text-base text-muted-foreground">{org}</p>}
+        <p className="text-sm sm:text-base lg:text-sm font-medium text-foreground/90 mb-0.5 sm:mb-1">{role}</p>
+        {org && <p className="text-sm sm:text-base lg:text-sm text-muted-foreground">{org}</p>}
       </div>
     </div>
   );
