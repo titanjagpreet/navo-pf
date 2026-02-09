@@ -14,14 +14,20 @@ import {
 } from "lucide-react";
 
 import Image from "next/image";
+import { ThemeToggle } from "./components/ThemeToggle";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans">
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans transition-colors duration-300">
       
+      {/* Theme Toggle - Fixed Top Right */}
+      <div className="fixed top-4 right-4 z-50 animate-fade-in">
+        <ThemeToggle />
+      </div>
+
       {/* Floating Dock Navigation */}
       <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit px-4">
         <div className="flex items-center gap-1 sm:gap-2 px-2 py-2 sm:px-4 sm:py-3 lg:px-3 lg:py-2 rounded-full border border-border bg-card/80 backdrop-blur-md shadow-lg ring-1 ring-white/10 overflow-x-auto max-w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
@@ -34,11 +40,11 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="max-w-3xl mx-auto px-6 pb-32">
+      <main className="max-w-3xl mx-auto px-6 pb-24">
         
         {/* Hero Section */}
         <header 
-          className={`pt-20 sm:pt-28 lg:pt-20 pb-8 sm:pb-12 lg:pb-8 transition-all duration-700 ${
+          className={`pt-20 sm:pt-28 lg:pt-20 pb-6 sm:pb-10 lg:pb-6 transition-all duration-700 ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -60,7 +66,7 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-full w-full bg-green-500"></span>
                 </span>
-                <span className="whitespace-nowrap">Open to collab</span>
+                <span className="whitespace-nowrap">Exploring 3D</span>
               </div>
             </div>
 
@@ -81,8 +87,10 @@ export default function Home() {
           </div>
         </header>
 
+        <SectionDivider />
+
         {/* About Section */}
-        <section id="about" className="py-6 sm:py-8 lg:py-6 border-t border-border/40">
+        <section id="about" className="py-2 sm:py-4 lg:py-2">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <User className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             About Me
@@ -97,8 +105,10 @@ export default function Home() {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* Experience / Affiliation Section */}
-        <section id="affiliation" className="py-6 sm:py-8 lg:py-6 border-t border-border/40">
+        <section id="affiliation" className="py-2 sm:py-4 lg:py-2">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             Experience
@@ -122,8 +132,10 @@ export default function Home() {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* Education Section */}
-        <section id="education" className="py-6 sm:py-8 lg:py-6 border-t border-border/40">
+        <section id="education" className="py-2 sm:py-4 lg:py-2">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             Education
@@ -138,7 +150,7 @@ export default function Home() {
               icon={<BookOpen className="w-6 h-6 sm:w-7 sm:h-7" />}
             />
             <ExperienceCard 
-              title="B.Tech (CSE)"
+              title="B.Tech"
               role="University Institute of Technology Rajiv Gandhi Proudyogiki Vishwavidyalaya (UIT RGPV)"
               org="Bhopal, India"
               date="2019"
@@ -147,8 +159,10 @@ export default function Home() {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* Research Interests (Tech Stack Style) */}
-        <section id="research" className="py-6 sm:py-8 lg:py-6 border-t border-border/40">
+        <section id="research" className="py-2 sm:py-4 lg:py-2">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             Research Interests
@@ -164,8 +178,10 @@ export default function Home() {
           </div>
         </section>
 
+        <SectionDivider />
+
         {/* Contact Section */}
-        <section id="contact" className="py-16 sm:py-20 lg:py-16 border-t border-border/40 text-center">
+        <section id="contact" className="py-8 sm:py-12 lg:py-8 text-center">
           <div className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-secondary text-[10px] sm:text-xs font-medium mb-4 sm:mb-6 tracking-wide">
             CONTACT
           </div>
@@ -196,11 +212,24 @@ export default function Home() {
 
 // Components
 
+function SectionDivider() {
+  return (
+    <div className="flex items-center justify-center py-5 sm:py-6 opacity-40">
+      <div className="w-full h-px max-w-[200px] bg-linear-to-r from-transparent via-border to-transparent" />
+      <div className="mx-2 text-border text-xs">✻</div>
+      <div className="w-full h-px max-w-[200px] bg-linear-to-r from-transparent via-border to-transparent" />
+    </div>
+  );
+}
+
 function DockLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
   return (
     <a 
       href={href}
-      className="p-2.5 rounded-xl text-muted-foreground hover:text-foreground hover:bg-secondary transition-all duration-200 hover:-translate-y-1 relative group"
+      className="p-2.5 rounded-xl hover:bg-secondary/80 transition-all duration-200 hover:-translate-y-1 relative group"
+      style={{ 
+        color: 'var(--foreground)',
+      }}
       aria-label={label}
     >
       {icon}
