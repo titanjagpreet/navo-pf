@@ -134,7 +134,7 @@ export default function Home() {
 
         <SectionDivider />
 
-        {/* Education Section */}
+        {/* Education Section
         <section id="education" className="py-2 sm:py-4 lg:py-2">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
             <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
         </section>
 
-        <SectionDivider />
+        <SectionDivider /> */}
 
         {/* Research Interests (Tech Stack Style) */}
         <section id="research" className="py-2 sm:py-4 lg:py-2">
