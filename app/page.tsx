@@ -34,7 +34,7 @@ export default function Home() {
           <DockLink href="#" icon={<HomeIcon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Home" />
           <DockLink href="#about" icon={<User className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="About" />
           <DockLink href="#affiliation" icon={<Briefcase className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Experience" />
-          <DockLink href="#education" icon={<GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Education" />
+          {/* <DockLink href="#education" icon={<GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Education" /> */}
           <DockLink href="#research" icon={<BookOpen className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Research" />
           <DockLink href="#contact" icon={<Mail className="w-5 h-5 sm:w-6 sm:h-6 lg:w-5 lg:h-5" />} label="Contact" />
         </div>
